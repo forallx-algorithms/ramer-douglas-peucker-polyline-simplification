@@ -31,7 +31,7 @@ const simplify = (polyline, si, ei, d) => {
     const s = polyline[si];
     const e = polyline[ei];
 
-    if (Math.abs(si - ei) == 1) {
+    if (ei - si === 1) {
         return [s, e];
     }
 
