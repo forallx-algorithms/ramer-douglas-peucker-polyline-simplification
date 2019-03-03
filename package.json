@@ -1,0 +1,15 @@
+{
+  "name": "douglas-peucker-algorithm",
+  "version": "1.0.0",
+  "description": "Douglas Peucker algorithm",
+  "main": "douglas_peucker.js",
+  "scripts": {
+    "test": "mocha *.test.js"
+  },
+  "author": "Evgeniy Kuznetsov",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
+  }
+}
