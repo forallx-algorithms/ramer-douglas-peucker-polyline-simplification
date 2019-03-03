@@ -23,10 +23,15 @@ const computePerpendicularDistance = (s, e, p) => {
     const lv = vec2norm(vec2sub(e, s));
     const pv = vec2sub(p, s);
     const projected = vec2scale(lv, vec2dot(lv, pv));
-    const d = vec2length(vec2sub(projected, pv));
-    return d;
+    return vec2length(vec2sub(projected, pv));
 };
 
+/**
+ * Simplifies part of the line bounded by "si" and "ei" indexes
+ * @param {number} si Index of the start point
+ * @param {number} ei Index of the end point
+ * @return {[number, number][]} Simplified part of the given polyline
+ */
 const simplify = (polyline, si, ei, d) => {
     const s = polyline[si];
     const e = polyline[ei];
@@ -49,7 +54,11 @@ const simplify = (polyline, si, ei, d) => {
         const left = simplify(polyline, si, maxIndex, d);
         const right = simplify(polyline, maxIndex, ei, d);
 
-        return left.concat(right.slice(1));
+        // left and right both contain maxIndex element
+        // so remove maxIndex from left
+        left.pop();
+
+        return left.concat(right);
     } else {
         return [s, e];
     }
