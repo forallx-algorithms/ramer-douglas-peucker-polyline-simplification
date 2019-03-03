@@ -1,8 +1,8 @@
 {
-  "name": "douglas-peucker-algorithm",
+  "name": "ramer-douglas-peucker-line-simplification-algorithm",
   "version": "1.0.0",
-  "description": "Douglas Peucker algorithm",
-  "main": "douglas_peucker.js",
+  "description": "Ramer-Douglas-Peucker line simplification algorithm",
+  "main": "ramer_douglas_peucker.js",
   "scripts": {
     "test": "mocha *.test.js"
   },
