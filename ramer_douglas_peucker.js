@@ -71,7 +71,7 @@ const simplify = (polyline, si, ei, d) => {
  * @param {number} d
  * @returns {[number, number][]} Simplified polyline
  */
-const douglasPeuckerSimplification = (polyline, d) => {
+const ramerDouglasPeuckerSimplification = (polyline, d) => {
     if (polyline.length > 1) {
         return simplify(polyline, 0, polyline.length - 1, d);
     } else {
@@ -80,5 +80,5 @@ const douglasPeuckerSimplification = (polyline, d) => {
 };
 
 module.exports = {
-    douglasPeuckerSimplification
+    ramerDouglasPeuckerSimplification
 };
