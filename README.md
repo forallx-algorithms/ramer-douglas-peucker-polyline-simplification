@@ -1,1 +1,1 @@
-## Ramer-Douglas-Peucker line simplification algorithm
+## Ramer-Douglas-Peucker polyline simplification algorithm
